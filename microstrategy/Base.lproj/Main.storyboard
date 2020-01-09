@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Siri____MSTR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFL-7p-uwE">
+                                <rect key="frame" x="115.66666666666669" y="74" width="144" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Updated: XXXX-XX-XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFL-ew-GK8">
+                                <rect key="frame" x="13" y="741" width="351" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="MzZ-6q-Esp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1H-cI-VXA">
+                                <rect key="frame" x="109" y="369" width="157" height="74.333333333333314"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <state key="normal" title="Refresh data">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshDataButtonWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="2ok-TU-Jia"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7843137255" green="0.21960784310000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MFL-ew-GK8" secondAttribute="bottom" constant="-1" id="5hZ-IR-UZr"/>
+                            <constraint firstItem="UFL-7p-uwE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="6md-3i-ua4"/>
+                            <constraint firstItem="G1H-cI-VXA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="CAe-HQ-j1E"/>
+                            <constraint firstItem="UFL-7p-uwE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HD1-GJ-eIc"/>
+                            <constraint firstItem="MFL-ew-GK8" firstAttribute="top" secondItem="G1H-cI-VXA" secondAttribute="bottom" constant="297.66666666666669" id="M6F-vA-mrl"/>
+                            <constraint firstItem="G1H-cI-VXA" firstAttribute="top" secondItem="UFL-7p-uwE" secondAttribute="bottom" constant="261.33333333333337" id="QEO-2n-ZMr"/>
+                            <constraint firstItem="MFL-ew-GK8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="T0x-ZY-Zjq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G1H-cI-VXA" secondAttribute="trailing" constant="109" id="a4n-YU-ZwA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MFL-ew-GK8" secondAttribute="bottom" constant="-1" id="at2-hC-T89"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MFL-ew-GK8" secondAttribute="bottom" constant="-1" id="wfy-Gy-51M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MFL-ew-GK8" secondAttribute="trailing" constant="11" id="zoa-Ha-OvP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="refreshButton" destination="G1H-cI-VXA" id="rRo-v0-m0z"/>
+                        <outlet property="updateLabel" destination="MFL-ew-GK8" id="Wdm-xp-Gr0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.7843137255" green="0.21960784310000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

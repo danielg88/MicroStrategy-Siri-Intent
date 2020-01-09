@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intent View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="IntentViewController" customModule="getValuesUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metric" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hz-yJ-95k">
+                                <rect key="frame" x="132.5" y="24" width="55.5" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ XXX.XXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6TL-qI-vVz">
+                                <rect key="frame" x="90" y="58" width="140" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yN3-2J-7tu">
+                                <rect key="frame" x="20" y="110" width="17" height="19"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A xx% percent difference from previous" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CYd-tU-lfG">
+                                <rect key="frame" x="40.5" y="103" width="239" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7843137255" green="0.21960784310000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6TL-qI-vVz" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="1kL-5f-I3j"/>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="bottom" secondItem="CYd-tU-lfG" secondAttribute="bottom" constant="14" id="2XR-io-cW0"/>
+                            <constraint firstItem="CYd-tU-lfG" firstAttribute="top" secondItem="6TL-qI-vVz" secondAttribute="bottom" constant="11" id="4JB-kU-gA2"/>
+                            <constraint firstItem="6TL-qI-vVz" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="4cq-xC-VXF"/>
+                            <constraint firstItem="CYd-tU-lfG" firstAttribute="centerY" secondItem="yN3-2J-7tu" secondAttribute="centerY" id="5N9-nU-k9I"/>
+                            <constraint firstItem="CYd-tU-lfG" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="YeD-jc-Wuw"/>
+                            <constraint firstItem="6TL-qI-vVz" firstAttribute="top" secondItem="1hz-yJ-95k" secondAttribute="bottom" constant="10" id="dUJ-Bj-zeT"/>
+                            <constraint firstItem="1hz-yJ-95k" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="vWp-9c-chm"/>
+                            <constraint firstItem="CYd-tU-lfG" firstAttribute="leading" secondItem="yN3-2J-7tu" secondAttribute="trailing" constant="3.5" id="x3e-u0-7Di"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4PN-XC-lEE"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="150"/>
+                    <connections>
+                        <outlet property="arrowImage" destination="yN3-2J-7tu" id="7eA-e4-sfu"/>
+                        <outlet property="comparisonLabel" destination="CYd-tU-lfG" id="h3G-FU-8fj"/>
+                        <outlet property="metricLabel" destination="1hz-yJ-95k" id="TIX-Hg-uFH"/>
+                        <outlet property="valueLabel" destination="6TL-qI-vVz" id="1Kw-JS-ZRx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.up" catalog="system" width="60" height="64"/>
+    </resources>
+</document>
